@@ -6,3 +6,127 @@
 - local project is on your vs code 
 - `git add .` 
     - adds everything in the current folder to staging area.
+-Version Control System 
+-Makes tracking changes to your code 
+-Easily swap versions/undo changes. 
+-Team needs a central place to save their changes: GitHub 
+-Remote repository for other people to access their code. 
+-Most likely, you won’t remember what you changed since an error occurred. 
+-Git will show you what files have changed and what changed in each file. 
+-Allows you to change back to previous versions of your code. 
+
+
+-Initialize git into your project (git init) in the terminal 
+-Adds .git folder to track all the changes you make to your project 
+-Second option is to clone it. 
+-git clone ssh_url 
+-Adds .git folder 
+-Adds Remote 
+
+
+-Git Structure 
+-Working directory 
+-All the files in the local repository in their current state. 
+-Add to index/staging, using the git add command 
+-Tells git we want to track all the changes we have made in our working directory 
+-Commit the changes to the head. 
+-git commit 
+-git push command 
+-git remote add origin ssh_url 
+-Push the changes to the remote repository on github 
+-Pulling 
+-Git pull 
+ -Copies everything from the remote repository to your computer. 
+-Branches 
+-Copy of the code that has its own separate history 
+-Pushing the changes to their own branch instead of to the master branch (so there’s no overlap in coding from feature a branch in feature b commit) 
+-git checkout feature_b 
+-git branch feature_b 
+-git checkout -b feature_b 
+-git merge feature_a 
+-Will notify you of conflicts that occur with merging the branches. 
+-git . add 
+-Add every single file that is in our project. 
+-Commit and then file will be added. 
+
+
+
+-Git Tutorial for Beginners 
+
+-Git vs Github
+-Github = website. add-on/extension to Git. gives you commands
+-Git = version control, (merging, pulling, pushing, making a commit)
+-Repository: local/remote. A store: where you have a bunch of code. 
+-Local: sits on your end, your version of the code 
+-Remote repository: all of the updated code. Where you have the most recent version (where it works) 
+-They push the changes from the local repository to the remote repository 
+-Git figures out what happened in the two files that were changed and can merge those changes so that it will work
+-Github tracks the history of commits 
+-Commits are the changes that you made. 
+-Storing when you changed a bunch of things and saved it as a bundle 
+-Commit the changes locally. Can make multiple commits. Push them up to the remote repository. 
+-Pull: pulling the changes from the remote repository, gives you all of the new commits since you last pulled those changes. 
+-Merge them into the local repository
+-Master branch
+-The main branch of the repository. 
+-One version of the code base. 
+-Core code base.
+-Want to make sure that it is always working 
+-If other people pull from this, then their code will also be broken 
+-Branch
+-Copy of repository at a certain point in time that has different changes 
+-Be able to work on a new feature, put it into a new repository without actually affecting the master branch. 
+-Making different changes so that you’re not affecting the master branch because that’s what everyone else is using. 
+-Can then merge it with the master branch once you’re sure that it’s working. 
+-Takes all commit messages and merges them in the correct order that it should go to the master branch. 
+-On the feature branch: you can still update the feature branch from the master branch. (so it can stay up to date but still -make changes without affecting the master branch) 
+
+-cd: change directory 
+-mkdir test_repo 
+-Making a new folder on desktop 
+-Make sure you’re in a git repository before doing all of the git commands 
+-Staging area
+-Where you temporarily add/remove files that you want to be in your next commit 
+-git add (name of file) 
+-git status 
+-No commits yet, changes to be committed 
+-commit when you’ve made some sort of progress
+-git commit -m “commit message” 
+-describes what you’ve changed in that commit 
+-add file, stage, make another commit 
+-git add . 
+-add all files 
+-git status 
+-git commit -m “descriptive of commit” 
+-make a new branch
+-git checkout -b 
+-change between branches
+-b make a new branch 
+-copied everything from the master branch, but everything you change on the new branch won’t affect the master branch. 
+-git add . 
+-git commit -m “first commit on new branch” 
+-git checkout master 
+-automatically removes the changes that were made on the other branch. 
+-master branch has original changes 
+-import pygame 
+-git add . 
+-git status 
+-git commit -m “added test.py” 
+-change to new branch 
+-git checkout new 
+-git merge master
+-takes all changes from master branch and merges them with your changes 
+
+-remote: url to another repository 
+-git push -u origin master 
+-push all commits to the origin master. 
+-picking where and which branch you want to push to 
+-u means save those settings 
+-changes on the remote repository that you don’t have, so you need to pull those changes down before you can push them up to the remote repository 
+-when you try to pull it down and there’s a conflict, you can’t automatically merge the code
+-need to tell git what you want the code to look like. 
+-delete all the arrows, make the file look how you want it to look 
+-save it and resolve the merge conflict 
+-commit the change 
+-merge conflict: fix the file, add those changes, then commit those changes 
+-git push: you can push up to the remote repository because you pulled, added, committed, and then you can push it. 
